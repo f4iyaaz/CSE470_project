@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #000, #ffd700 80%);
+  /* Diagonal gradient from black to gold */
+  color: #ffd700; /* Golden text */
+  line-height: 1.6;
+  min-height: 100vh; /* Ensure the background covers the full screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero {
+  background-color: rgba(68, 68, 68, 0.9); /* Semi-transparent dark gray */
+  color: #ffd700; /* Golden text */
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.result {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent dark gray */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  color: #ffd700; /* Golden text */
+}
+
+.result p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.result p:first-child {
+  font-weight: bold;
+  color: #ffeb3b; /* Bright yellow for emphasis */
+  font-size: 20px;
+}
+
+.converter {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(17, 17, 17, 0.95); /* Almost black with slight transparency */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.input,
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ffd700; /* Golden border */
+  background-color: #222; /* Dark input background */
+  color: #ffd700; /* Golden text */
+}
+
+.input:focus,
+.submit-btn:focus {
+  outline: none;
+  border-color: #ffeb3b; /* Bright yellow focus */
+}
+
+.submit-btn {
+  background-color: #444; /* Dark button */
+  color: #ffd700; /* Golden text */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #555; /* Slightly lighter for hover effect */
+}
+
+.result,
+.error {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error {
+  color: #ff4444; /* Red for error messages */
+}
+
+.additional-info {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.additional-info h2 {
+  margin-bottom: 20px;
+  color: #ffd700; /* Golden text */
+}
+
+@media (min-width: 768px) {
+  .converter form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .converter .input,
+  .converter .submit-btn {
+    width: 100%;
+    margin: 0;
+  }
+
+  .converter .input[type="number"] {
+    grid-column: 1 / -1;
+  }
+
+  .submit-btn {
+    grid-column: 1 / -1;
+  }
+}
+
