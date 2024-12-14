@@ -3,6 +3,7 @@ import "./App.css";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Converter from "./pages/Home";
+import Dashboard from "./pages/DashboardPage";
 import { useState } from "react";
 import RefrshHandler from "./RefershHandler";
 
@@ -24,7 +25,12 @@ function App() {
           path="/currencyconverter"
           element={<PrivateRoute element={<Converter />} />}
         />
+        <Route
+          path="/dashboard"
+          element={<PrivateRoute element={<Dashboard />} />}
+        />
       </Routes>
+      
     </div>
   );
 }

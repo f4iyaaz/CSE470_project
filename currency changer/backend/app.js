@@ -7,9 +7,11 @@ const corsOptions = require("./middlewares/corsOptions");
 const currencyRoutes = require("./routes/currencyRoutes.js");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const AuthRouter = require("./routes/auth.route.js");
+const ConvertRouter = require("./routes/conversionRoute.js")
 const path = require("path");
 const { connectDB } = require("./db.js");
 const cookieParser = require("cookie-parser");
+// const 
 
 const PORT = process.env.PORT || 5000;
 
@@ -25,6 +27,7 @@ app.use(cookieParser());
 app.use("/api", currencyRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/auth", AuthRouter);
+app.use("/api/convert", ConvertRouter);
 
 // Start the Server
 app.listen(PORT, () => {

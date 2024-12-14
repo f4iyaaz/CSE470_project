@@ -6,6 +6,7 @@ import Converter from "./pages/Home";
 import Logout from "./pages/Logout"; // Import the Logout component
 import { useState, useEffect } from "react";
 import RefrshHandler from "./RefreshHandler";
+import Dashboard from "./pages/DashboardPage";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -32,6 +33,10 @@ function App() {
         <Route
           path="/currencyconverter"
           element={<PrivateRoute element={<Converter />} />}
+        />
+        <Route
+          path="/dashboard"
+          element={<PrivateRoute element={<Dashboard />} />}
         />
         <Route
           path="/logout"

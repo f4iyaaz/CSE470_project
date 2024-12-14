@@ -13,18 +13,32 @@ function Logout() {
     navigate("/login");
   };
 
+  const goToDashboard = () => {
+    // Redirect to the dashboard page
+    navigate("../dashboard");
+  };
+
   return (
-    <button onClick={handleLogout} style={styles.button}>
-      Logout
-    </button>
+    <div style={styles.container}>
+      <button onClick={goToDashboard} style={styles.button}>
+        Dashboard
+      </button>
+      <button onClick={handleLogout} style={styles.button}>
+        Logout
+      </button>
+    </div>
   );
 }
 
 const styles = {
+  container: {
+    position: "absolute",
+    top: "20px",
+    right: "20px",
+    display: "flex",
+    gap: "10px", // Space between buttons
+  },
   button: {
-    position: "absolute", // Position the button absolutely
-    top: "20px", // Adjust this to control how far from the top
-    right: "20px", // Adjust this to control how far from the right
     backgroundColor: "purple",
     color: "white",
     border: "none",
